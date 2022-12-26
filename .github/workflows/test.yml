@@ -1,0 +1,12 @@
+name: Dev build and publish Docker distributions to Github Container Registry ghcr.io
+on:
+  push:
+    branches-ignore:
+      #- master
+      - version-*
+
+jobs:
+  build-job:
+    uses: ak49630/.github/.github/workflows/trivy-tpl.yml@main
+    #secrets:
+      #CR_PAT: ${{ secrets.CR_PAT }}
