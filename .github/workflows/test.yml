@@ -24,10 +24,10 @@ jobs:
     steps:
       - name: Print repository_owner ENV 
         run: echo "$OWNER_REPO"
-#      - name: Print repository_owner ENV 
-#        run: echo "${OWNER_REPO}"
       - name: Print repository_owner ENV 
-        run: echo "${{ OWNER_REPO }}"
+        run: echo "${OWNER_REPO}"
+#      - name: Print repository_owner ENV 
+#        run: echo "${{ OWNER_REPO }}"
         
       - name: Print repository_owner
         run: echo "${{ github.repository_owner }}"
