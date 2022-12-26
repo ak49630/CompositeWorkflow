@@ -13,7 +13,7 @@ jobs:
       CR_PAT: ${{ secrets.CR_PAT }}
 
   build-job-relative-path:
-    uses: ${{ github.repository_owner }}/.github/.github/workflows/trivy-tpl.yml@main
+    uses: "${{ github.repository_owner }}"/.github/.github/workflows/trivy-tpl.yml@main
     secrets:
       CR_PAT: ${{ secrets.CR_PAT }}
 
