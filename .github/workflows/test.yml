@@ -4,6 +4,14 @@ on:
     branches-ignore:
       #- master
       - version-*
+  workflow_dispatch:
+    inputs:
+      ownerName:
+        description: "ownerName"
+        default: "ak49630"
+        type: string
+ 
+      
 env:
   OWNER_REPO: "${{ github.repository_owner }}"
 jobs:
@@ -22,6 +30,8 @@ jobs:
   dump_contexts_to_log:
     runs-on: ubuntu-latest
     steps:
+      - name: Print repository_owner dispatch 
+        run: echo "${{ github.event.inputs.ownerName }}"    
       - name: Print repository_owner ENV 
         run: echo "$OWNER_REPO"
       - name: Print repository_owner ENV 
