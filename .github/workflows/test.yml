@@ -4,7 +4,8 @@ on:
     branches-ignore:
       #- master
       - version-*
-
+env:
+  OWNER_REPO: "${{ github.repository_owner }}"
 jobs:
  
   build-job:
@@ -12,10 +13,10 @@ jobs:
     secrets:
       CR_PAT: ${{ secrets.CR_PAT }}
 
-  build-job-relative-path:
-    uses: "${{ github.repository_owner }}"/.github/.github/workflows/trivy-tpl.yml@main
-    secrets:
-      CR_PAT: ${{ secrets.CR_PAT }}
+#  build-job-relative-path:
+#    uses: "${{ github.repository_owner }}"/.github/.github/workflows/trivy-tpl.yml@main
+#    secrets:
+#      CR_PAT: ${{ secrets.CR_PAT }}
 
       
   dump_contexts_to_log:
