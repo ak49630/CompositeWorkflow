@@ -15,6 +15,8 @@ jobs:
   dump_contexts_to_log:
     runs-on: ubuntu-latest
     steps:
+      - name: Print repository_owner
+        run: echo "${{ github.repository_owner }}"
       - name: Dump GitHub context
         id: github_context_step
         run: echo '${{ toJSON(github) }}'
