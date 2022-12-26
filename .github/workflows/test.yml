@@ -9,7 +9,7 @@ env:
 jobs:
  
   build-job:
-    uses: ak49630/.github/.github/workflows/trivy-tpl.yml@main
+    uses: $OWNER_REPO/.github/.github/workflows/trivy-tpl.yml@main
     secrets:
       CR_PAT: ${{ secrets.CR_PAT }}
 
