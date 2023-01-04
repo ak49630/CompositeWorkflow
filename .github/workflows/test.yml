@@ -1,9 +1,9 @@
 name: Dev build and publish Docker distributions to Github Container Registry ghcr.io
 on:
-  push:
-    branches-ignore:
-      #- master
-      - version-*
+#  push:
+#    branches-ignore:
+#      #- master
+#      - version-*
   workflow_dispatch:
     inputs:
       ownerName:
