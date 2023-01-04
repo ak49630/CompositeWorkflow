@@ -10,7 +10,10 @@ on:
         description: "ownerName"
         default: "ak49630"
         type: string
- 
+      javaVersion:
+        required: false
+        type: string
+        default: '11' 
       
 env:
   OWNER_REPO: "${{ github.repository_owner }}"
@@ -31,6 +34,9 @@ jobs:
   dump_contexts_to_log:
     runs-on: ubuntu-latest
     steps:
+      - name: Set up JDK ${{ inputs.javaVendor }}
+        run: echo "${{ inputs.javaVendor }}"    
+
       - name: Print repository_owner dispatch 
         run: echo "${{ github.event.inputs.ownerName }}"    
       - name: Print repository_owner ENV 
