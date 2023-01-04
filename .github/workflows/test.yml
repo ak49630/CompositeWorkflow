@@ -10,6 +10,7 @@ on:
         description: "ownerName"
         default: "ak49630"
         type: string
+        
       javaVersion:
         required: false
         type: string
